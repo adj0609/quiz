@@ -1,5 +1,5 @@
-const restartBtn = document.getElemtById('restar');
-const prevBtn = document.getElemtById('prev');
+const restartBtn = document.getElementById('restart');
+const prevBtn = document.getElementById('prev');
 const nextBtn = document.getElementById('next');
 const submitBtn= document.getElementById('submit');
 const trueBtn= document.getElementById('True');
