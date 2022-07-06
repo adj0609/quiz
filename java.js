@@ -29,8 +29,7 @@ let question = [
     {    question:"Where is Drury Lane",
         answer: [
             {option:"London,",answer:true},
-            {option:"Dublin",answer:false},
-            {option:"Gotham",answer:false}
+            {option:"Dublin",answer:false}
         ]
     }
 ]
@@ -38,7 +37,7 @@ let question = [
         
  
         
-        restartBtn.addEventLister ('click',restart);
+        restartBtn.addEventListener ('click',restart);
         prevBtn.addEventListener('click',prev);
         nextBtn.addEventListener('click',next);
         submitBtn.addEventListener('click',submit);
@@ -46,7 +45,7 @@ let question = [
 function beginQuiz(){
     currentQuestion = 0;
     questionText.innerHTML = questions[currentQuestion].question;
-    trueBtn.innerHTML = question[currentQuestion].question;
+    trueBtn.innerHTML = question[currentQuestion].answer[0].option;
     trueBtn.onclick = () => {
         let ano=0;
         if(question[currentQuestion].answers[ano].answer){
@@ -62,13 +61,13 @@ function beginQuiz(){
     falseBtn.innerHTML = questions[currentQuestion].answer[1].option;
 falseBtn.onclick =() => {
     let ano=1;
-    if(question[currentQuestion].answer[ano].answer){
+    if(question[currentQuestion].answers[ano].answer){
         if(score<3){
             score++;
         }
     }
     userScore.innerHTML = score;
-    if(currentQuestion<3){
+    if(currentQuestion<2){
         next();
     }
 }
