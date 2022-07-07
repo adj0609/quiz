@@ -1,3 +1,8 @@
+
+
+
+
+
 //Section list
 const QUIZ_SECTIONS = document.querySelectorAll(".quiz-section");
 
