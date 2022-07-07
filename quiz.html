@@ -2,36 +2,56 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+
     <title>BrainTeaser</title>
-    <link rel="stylesheet" type="text/css" href="style.css" />
-    <script src="java.js"></script>
 </head>
 <body>
-    
+   
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light mb-4">
+            <a class="navbar-brand" href="highscores.html">View Highscores</a>
+            <div class="navbar-collapse" id="navbarText"></div>
+            <section class="navbar-text" id='restartButton'></section>
+                Time: 75seconds
+            </section>
+        </nav>
+    </header>
+    <main>
+        <section id="start" class="quiz-section">
+            <h1>Brain Teaser</h1>
+            <p class="card-text">
+                Try to answer the following questions within the time limit.
+                <br>
+                Don't forget incorrect answers will penalize your score/time
+                <br>
+                by 10 seconds!
+            </p>
+            <button id="start-button>Show your Knowledge</button>
+        </section>
+        <section id="quiz-questions" class="hidden quiz-section">
+            <p id="timer">Time: <span id="time-remaining">0</span></p>
+            <h1 id="question">Quiz Question</h1>
+            <ul id="choices"></ul>
+        </section>
+        <section id="end" class="quiz-section hidden">
+            <h1 id="end-title">Completed</h1>
+            <p id="score-text">Your Score: <span id="score">0</span></p>
+            <form id="submit=score">
+                <label for="initials">initials:</label>
+                <input type="text" id="initials">
+                <button type="submit">Submit</button>
+                <p id="error-message"></p>
+                </form>
+                <a href="quiz.html" class="back-button"><i class="fas fa-angle-left" aria-hidden="true"></i>i>Back to quiz</a>
+            </section>
+            <div>
+                <p id="correct" class="choice-status hidden"><i class="fas fa-check-circle" aria-hidden="true"></i>Correct!</p>
+                <p id="wrong" class="choice-status hidden"><i class=fas fa-times-circle: aria-hidden="true"></i>Wrong!</p>   
+            </div>
+    </main>
+    <script src="./scripts/java.js"></script>
 </body>
 </html>
-<body>
-    <div class="container">
-        <div class="score">
-            <span id="user-score">0</span>
-            <span id="total-score">/ 3</span>
-        </div>
-    
-    <div class="content" id="question-area">
-        <div id="question-text"></div>
-        <div class="options">
-        <button class="btn btn-option" id="True">True</button>
-        <button class="btn btn-option" id="False">False</button>
-        </div>
-    </div>
-
-    <div class="controls">
-        <button class="btn btn-restart"
-id="restart">Restart</button>
-        <button class="btn btn-prev" id="prev">Prev</button>
-        <button class="btn btn-next" id="next">Next</button>
-        <button class="btn btn-submit" id="submit">Submit</button>
-        </div>
-    </div>
-</body>
